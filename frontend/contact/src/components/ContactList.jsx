@@ -44,6 +44,26 @@ const ContactList = () => {
     const handleDeleteContact = (id) => {
         setContacts((prevContacts) => prevContacts.filter((contact) => contact._id !== id));
     };
+     // Delete contact and refresh
+    //  const handleDelete = async (id) => {
+    //     const confirmDelete = window.confirm('Are you sure you want to delete this contact?');
+    //     if (!confirmDelete) return;
+      
+    //     try {
+    //       const response = await axios.delete(`/api/contacts/${id}`);
+    //       if (response.status === 200) {
+    //         setContacts((prevContacts) => prevContacts.filter((contact) => contact._id !== id));
+    //         alert('Contact deleted successfully!');
+    //       } else {
+    //         console.warn('Unexpected deletion response:', response);
+    //         alert('Deletion was not successful. Please try again.');
+    //       }
+    //     } catch (error) {
+    //       console.error('Error deleting contact:', error);
+    //       alert('Failed to delete contact. Please try again.');
+    //     }
+    //   };
+      
 
     const filteredContacts = contacts.filter(
         (contact) =>
